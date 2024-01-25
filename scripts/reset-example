@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [ -z "${ROLI_EXAMPLES_DIR}" ]; then
+    echo "Missing ROLI_EXAMPLES_DIR"
+    exit 1
+fi
+
+if [ -z "${1}" ]; then
+    echo "Syntax: ${0} <example-name>"
+    exit 1
+fi
+
+if [ ! -d "${ROLI_EXAMPLES_DIR}/${1}" ]; then
+    echo "Invalid example: ${1}"
+    exit 1
+fi
+
+pushd "${ROLI_EXAMPLES_DIR}/${1}"
+rm -rf node_modules
+rm -rf .roli
+rm -f roli.json
+rm -rf service/roli-runtime service/service.json service/README.md service/.gitignore
+
+rolix logout > /dev/null 2>&1
+
+popd

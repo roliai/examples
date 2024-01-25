@@ -1,0 +1,25 @@
+{
+  "name": "chat",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "An IRC-like chat server and client built on the Roli platform.",
+  "source": "src/index.mts",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "tsc",
+    "console": "node dist/index.mjs --console",
+    "chat":  "node dist/index.mjs"
+  },
+  "author": "Roli.ai, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "^9.0.3",
+    "chalk": "^5.0.0",
+    "roli-client": "latest",
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "roli-tools": "latest",
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roli-chatbot",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A chatbot and CLI client built on the Roli platform.",
+  "source": "src/index.mts",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "tsc",
+    "chat": "node dist/index.mjs"
+  },
+  "author": "Roli.ai, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "^9.0.3",
+    "chalk": "^5.0.0",
+    "roli-client": "latest",
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
