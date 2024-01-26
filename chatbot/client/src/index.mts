@@ -3,24 +3,20 @@ import inquirer from 'inquirer';
 import chalk from "chalk";
 
 import { ServiceOptions } from 'roli-client';
-import { createRoliClient, PoshChatbotApi } from "chatbot-service";
+import { createRoliClient, ChatbotApi } from "chatbot-service";
 
 const roli = createRoliClient(new ServiceOptions(false, false));
 
-// Get the API
-const chatbotApi = roli.getEndpoint(PoshChatbotApi, "default");
+const chatbotApi = roli.getEndpoint(ChatbotApi, "default");
 
 await inquirer.prompt([{
     type: 'input',
     name: 'userName',
     message: "Login: "
-}]).then(async ({userName}) => {
-    
+}]).then(async ({userName}) => {    
     console.log("Username: " + JSON.stringify(userName));
     
-    // Call the API to get a Chatbot session
-    const session = await chatbotApi.getSession(userName, "my-model");
-
+    const session = await chatbotApi.getSession(userName);
     console.log(`You are speaking with a chatbot. Your session ID is ${session.sessionId}. Use /quit to exit chat.`);
 
     while (true) {

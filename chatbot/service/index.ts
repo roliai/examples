@@ -1,6 +1,6 @@
 import {Endpoint, Session, getModel, Program, Instruction, Step, Prompt, createSession, ChatModelResponse } from "./roli-runtime";
 
-export class PoshChatbot extends Session {
+export class ChatbotSession extends Session {
     // note: Session properties aren't client visible or client addressable.
     private _history: Instruction[];
     userName: string | null;
@@ -24,7 +24,7 @@ export class PoshChatbot extends Session {
 
         let steps: Step[];
         if(this._history) {
-            steps = this._history;
+            steps = Array.from(this._history);
         } else {
             steps = [];
         }
@@ -53,9 +53,7 @@ export class PoshChatbot extends Session {
         // execute the Program
         await this.execute(program);
 
-        const executed = program.steps.pop() as Instruction;
-
-        this._history.push(executed);
+        this._history.push(program.steps.peek() as Instruction);
 
         return result;
     }
@@ -64,9 +62,11 @@ export class PoshChatbot extends Session {
 /**
  * An API for creating sessions with a PoshChatbot
  */
-export class PoshChatbotApi extends Endpoint {
+export class ChatbotApi extends Endpoint {
     constructor(key: string) {
         super(key);
+        if(key !== "default")
+            throw new Error("Invalid key");
     }
 
     /**
@@ -75,8 +75,8 @@ export class PoshChatbotApi extends Endpoint {
 
      * @returns 
      */
-    getSession(userName: string) : PoshChatbot {
-        const session = createSession(PoshChatbot);
+    getSession(userName: string) : ChatbotSession {
+        const session = createSession(ChatbotSession);
         session.userName = userName;
         console.log(`Session ${session.sessionId} created`);
         return session;
