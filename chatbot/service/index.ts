@@ -65,8 +65,6 @@ export class ChatbotSession extends Session {
 export class ChatbotApi extends Endpoint {
     constructor(key: string) {
         super(key);
-        if(key !== "default")
-            throw new Error("Invalid key");
     }
 
     /**
