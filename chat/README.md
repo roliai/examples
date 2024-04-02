@@ -12,7 +12,7 @@ Login to Roli
 
 Choose "Continue as Guest" to remain anonymous if you prefer.
 
-Checkout the repo:
+Download the example:
 
 3. `npx tiged roliai/examples/chat chat`
 
