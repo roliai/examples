@@ -1,7 +1,7 @@
 # Roli Real-Time Chat Example
 Example real-time CLI-based chat application using the Roli real-time state manager. All messages are sent through a new service you create (named "Chat") hosted in the Roli cloud sandbox.
 
-## Setup (1 minute)
+## Setup
 
 Install Roli Tools
 1. `npm install --global roli-tools`
@@ -40,8 +40,8 @@ Open a new terminal window and start the chat console.
 
 Open a second terminal and start client 1. Enter any name when prompted.
 
-8. `npm run chat`
+9. `npm run chat`
 
 Open a third terminal and start client 2. Enter another name when prompted.
 
-9. `npm run chat`
+10. `npm run chat`
