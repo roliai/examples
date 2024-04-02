@@ -14,30 +14,34 @@ Choose "Continue as Guest" to remain anonymous if you prefer.
 
 Checkout the repo:
 
-3. `npx tiged rolijs/chat chat`
+3. `npx tiged roliai/examples/chat chat`
 
-Init the Roli project:
+Init the Roli service:
 
-4. `roli init`
+4. `cd chat/service && roli init-service`
 
-Bring your Roli service online:
+Deploy the service:
 
-5. `roli up`
+5. `roli deploy-service`
 
-Install NPM modules
+Code-generate the client module:
 
-6. `npm install`
+6. `cd ../client && roli generate-client -d . chat`
 
 ## Run
 
-Open a new terminal and start the console:
+Build the client:
 
-7. `node index.mjs --console`
+7. `npm run build`
 
-Open a second terminal and start client 1. Enter any name when prompted. (For instance "Linus")
+Open a new terminal window and start the chat console.
 
-8. `node index.mjs`
+8. `npm run console`
 
-Open a third terminal and start client 2. Enter another name when prompted. (For instance "Torvalds")
+Open a second terminal and start client 1. Enter any name when prompted.
 
-9. `node index.mjs`
+8. `npm run chat`
+
+Open a third terminal and start client 2. Enter another name when prompted.
+
+9. `npm run chat`
