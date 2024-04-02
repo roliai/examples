@@ -26,7 +26,7 @@ Deploy the service:
 
 Code-generate the client module:
 
-6. `cd ../client && roli generate-client -d . chat`
+6. `cd ../src && roli generate-client -d . chat`
 
 ## Run
 
