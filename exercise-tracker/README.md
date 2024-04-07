@@ -15,6 +15,12 @@ npm install -g roli-tools
 
 If you get an error while installing and you're on MacOS, follow this guide to configure NPM to install globally without needing `sudo`: https://digitalzoomstudio.net/2023/10/install-npm-packages-globally-on-mac-without-sudo/
 
+## Install pnpm
+```shell
+npm install -g pnpm
+```
+See the note above if you get an error while installing and you're on MacOS.
+
 ## Set the Roli connection config
 ```shell
 roli set-connection-info admin=https://admin.roli.app api=https://api.roli.app --enterprise
@@ -39,6 +45,7 @@ roli deploy-service -d ./service
 ```shell
 roli generate-client -d .
 ```
+Answer `pnpm` (the default) when it asks.
 
 ## Run the project in development mode using Vite
 ```shell
