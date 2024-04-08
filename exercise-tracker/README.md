@@ -43,7 +43,7 @@ roli deploy-service -d ./service
 
 ## Generate the service client package
 ```shell
-roli generate-client -d .
+roli generate-client exercise-tracker -d .
 ```
 Answer `pnpm` (the default) when it asks.
 
