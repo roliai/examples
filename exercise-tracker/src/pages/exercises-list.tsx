@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useReducer} from 'react';
 import {Link} from 'react-router-dom';
 
 import {DataUpdatedEvent} from 'roli-client';
@@ -37,7 +37,7 @@ export function ExercisesList() {
 
     const [exercises, setExercises] = useState<Exercise[]>([]);
     const [intervalHandle, setIntervalHandle] = useState();
-    const [updater, setUpdater] = useState(0);
+    const [, forceUpdate] = useReducer(x => x + 1, 0);
 
     function onExerciseUpdate(e: DataUpdatedEvent<Exercise>) {
         if (e.deleted) {
@@ -46,7 +46,7 @@ export function ExercisesList() {
             console.log(`Exercise ${e.target.primaryKey} deleted`);
         } else {
             //When it's been updated, trigger a re-render.
-            setUpdater(updater + 1);
+            forceUpdate();
         }
     }
 
