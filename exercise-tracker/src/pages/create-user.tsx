@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ExerciseTrackerEndpoint} from 'exercise-tracker-service';
-import {useRoliClient} from "roli-react";
+import {useRoliClient} from 'exercise-tracker-service/react';
 import {Navigate} from "react-router-dom";
 
 export default function CreateUser() {

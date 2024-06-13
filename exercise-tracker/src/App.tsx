@@ -8,8 +8,8 @@ import {EditExercise} from "./pages/edit-exercise";
 import CreateExercise from "./pages/create-exercise";
 import CreateUser from "./pages/create-user";
 
-import {RoliProvider} from 'roli-react';
 import {createRoliClient} from "exercise-tracker-service";
+import {RoliProvider} from "exercise-tracker-service/react";
 
 // Create your roli client at the app-level, so it retains its state whilst the user is on the site.
 const roliClient = createRoliClient();

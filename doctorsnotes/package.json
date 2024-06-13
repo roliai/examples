@@ -18,11 +18,9 @@
     "@types/inquirer": "^9.0.3",
     "chalk": "^5.0.0",
     "doctorsnotes-service": "file:./.roli/bindings/doctorsnotes",
-    "inquirer": "^8.2.0",
-    "roli-client": "latest"
+    "inquirer": "^8.2.0"
   },
   "devDependencies": {
-    "roli-tools": "latest",
     "typescript": "^4.9.3"
   }
 }

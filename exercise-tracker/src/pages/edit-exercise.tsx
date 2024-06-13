@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import {useParams} from "react-router-dom"
 import "react-datepicker/dist/react-datepicker.css";
 import {Exercise, ExerciseTrackerEndpoint, User} from 'exercise-tracker-service';
-import {useRoliClient} from "roli-react";
+import {useRoliClient} from 'exercise-tracker-service/react';
 import {Navigate} from 'react-router-dom';
 import {SelectedUser, UserSelect} from "../components/user-select";
 

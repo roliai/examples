@@ -1,8 +1,8 @@
 import React, {useEffect, useState, useReducer} from 'react';
 import {Link} from 'react-router-dom';
 
-import {DataUpdatedEvent} from 'roli-client';
-import {useRoliClient} from "roli-react";
+import {DataUpdatedEvent} from 'exercise-tracker-service/client';
+import {useRoliClient} from 'exercise-tracker-service/react';
 import {Exercise, ExerciseAdded, ExerciseTrackerEndpoint} from 'exercise-tracker-service';
 
 interface ExerciseItemProps {

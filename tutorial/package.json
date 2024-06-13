@@ -11,8 +11,6 @@
   "dependencies": {
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
-    "roli-client": "latest",
-    "roli-react": "latest",
     "react": "^18.2.0",
     "react-datepicker": "^4.10.0",
     "react-dom": "^18.2.0",
@@ -25,8 +23,7 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "typescript": "^4.9.3",
-    "vite": "^4.2.0",
-    "roli-tools": "latest"
+    "vite": "^4.2.0"
   },
   "stackblitz": {
     "installDependencies": true,
