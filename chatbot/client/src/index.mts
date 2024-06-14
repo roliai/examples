@@ -2,8 +2,7 @@
 import inquirer from 'inquirer';
 import chalk from "chalk";
 
-import { ServiceOptions } from 'roli-client';
-import { createRoliClient, ChatbotApi } from "chatbot-service";
+import { createRoliClient, ChatbotApi, ServiceOptions } from "chatbot-service";
 
 const roli = createRoliClient(new ServiceOptions(false, false));
 
