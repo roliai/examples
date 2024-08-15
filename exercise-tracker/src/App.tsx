@@ -2,11 +2,11 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-import Navbar from "./components/navbar"
-import {ExercisesList} from "./pages/exercises-list";
-import {EditExercise} from "./pages/edit-exercise";
-import CreateExercise from "./pages/create-exercise";
-import CreateUser from "./pages/create-user";
+import Navbar from "./components/navbar.js"
+import {ExercisesList} from "./pages/exercises-list.js";
+import {EditExercise} from "./pages/edit-exercise.js";
+import CreateExercise from "./pages/create-exercise.js";
+import CreateUser from "./pages/create-user.js";
 
 import {createRoliClient} from "exercise-tracker-service";
 import {RoliProvider} from "exercise-tracker-service/react";

@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import {Exercise, ExerciseTrackerEndpoint, User} from 'exercise-tracker-service';
 import {useRoliClient} from 'exercise-tracker-service/react';
 import {Navigate} from 'react-router-dom';
-import {SelectedUser, UserSelect} from "../components/user-select";
+import {SelectedUser, UserSelect} from "../components/user-select.js";
 
 export function EditExercise() {
     const {id} = useParams();
@@ -36,7 +36,7 @@ export function EditExercise() {
                 setDuration(value.duration);
                 setDate(value.date);
             }
-        }).catch(reason => {
+        }).catch((reason: any) => {
             console.error(reason);
         });
 
@@ -47,7 +47,7 @@ export function EditExercise() {
             } else {
                 console.error("No users defined");
             }
-        }).catch(reason => {
+        }).catch((reason: any) => {
             console.error(reason);
         })
     }, []);
@@ -111,6 +111,8 @@ export function EditExercise() {
                 <div className="form-group">
                     <label>Date: </label>
                     <div>
+                        {/** See https://github.com/Hacker0x01/react-datepicker/issues/4039 */}
+                        {/* @ts-ignore */}
                         <DatePicker
                             required
                             selected={date}

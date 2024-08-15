@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import {Exercise, ExerciseTrackerEndpoint, User} from "exercise-tracker-service";
 import {useRoliClient} from "exercise-tracker-service/react";
 import {Navigate} from "react-router-dom";
-import {SelectedUser, UserSelect} from "../components/user-select";
+import {SelectedUser, UserSelect} from "../components/user-select.js";
 
 export default function CreateExercise() {
     const [selectedUser, setSelectedUser] = useState<SelectedUser>();
@@ -30,7 +30,7 @@ export default function CreateExercise() {
                 } else {
                     console.error("No users found");
                 }
-            }).catch(reason => {
+            }).catch((reason: any) => {
                 console.error(reason);
             }
         );
@@ -88,10 +88,12 @@ export default function CreateExercise() {
                 <div className="form-group">
                     <label>Date: </label>
                     <div>
+                        {/** See https://github.com/Hacker0x01/react-datepicker/issues/4039 */}
+                        {/* @ts-ignore */}
                         <DatePicker
                             required
                             selected={date}
-                            onChange={(d) => setDate(d!)}
+                            onChange={(d: any) => setDate(d!)}
                         />
                     </div>
                 </div>

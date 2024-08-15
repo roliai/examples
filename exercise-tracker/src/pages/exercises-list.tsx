@@ -1,9 +1,8 @@
 import React, {useEffect, useState, useReducer} from 'react';
 import {Link} from 'react-router-dom';
 
-import {DataUpdatedEvent} from 'exercise-tracker-service/client';
 import {useRoliClient} from 'exercise-tracker-service/react';
-import {Exercise, ExerciseAdded, ExerciseTrackerEndpoint} from 'exercise-tracker-service';
+import {Exercise, ExerciseAdded, ExerciseTrackerEndpoint, DataUpdatedEvent} from 'exercise-tracker-service';
 
 interface ExerciseItemProps {
     exercise: Exercise,
@@ -73,7 +72,7 @@ export function ExercisesList() {
 
         //Get all the exercises from the endpoint
         exerciseTracker.getExercises()
-            .then(exercises_ => {
+            .then((exercises_: Exercise[]) => {
                 setExercises(exercises_);
                 if (exercises_ && exercises_.length > 0) {
                     // tell Roli to keep them updated
