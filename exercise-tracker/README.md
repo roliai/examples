@@ -23,7 +23,7 @@ See the note above if you get an error while installing and you're on MacOS.
 
 ## Set the Roli connection config
 ```shell
-roli set-connection-info admin=https://admin.roli.app api=https://api.roli.app --enterprise
+roli set-connection-info admin=https://admin.roli.app api=https://api.roli.app login=https://admin.roli.app/login --enterprise
 ```
 
 ## Login to Roli
