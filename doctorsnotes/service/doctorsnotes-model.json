@@ -2,7 +2,7 @@
     "name": "gpt3-turbo",
     "url": "https://roli-doctorsnotes.wiremockapi.cloud/v1/chat/completions",
     "settings": {
-        "kind": "chat-model",
+        "kind": "openai",
         "frequency_penalty": 0,
         "logit_bias": { "foo": -100 },
         "max_tokens": 1000,

@@ -95,7 +95,7 @@ class DoctorsNotesSession extends Session {
             system: 'You are a helpful medical assistant that helps medical providers expand loosely formatted notes into well structured SOAP notes with clear subjective and objective observations, an overall assessment, and a plan for the future.',
             user: `${common}\nPlease rewrite this clinical note in standard SOAP form as a simple JSON object with keys "subjective", "objective", "assessment" and "plan".`, 
             assistant: (response: ChatModelResponse) => {
-                const content = response.choices[0].message.content;
+                const content = response.message;
                 if(!content || typeof content !== "string")
                     throw new Error("Not content returned from soap LLM call");
 

@@ -35,7 +35,7 @@ export class ChatbotSession extends Session {
         const prompt = {
             user: message,
             assistant: (response: ChatModelResponse)=> {
-                result = response.choices[0].message.content;
+                result = response.message;
                 return result;
             }
         } as Prompt;
