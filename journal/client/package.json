@@ -1,0 +1,35 @@
+{
+  "name": "journal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=production vite",
+    "build": "tsc && NODE_ENV=production vite build --debug",
+    "preview": "NODE_ENV=production vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
+    "react": "18.2.0",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.9.0",
+    "react-select": "^5.7.2",
+    "journal-service": "file:./.roli/bindings/journal"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  },
+  "stackblitz": {
+    "installDependencies": true,
+    "startCommand": false,
+    "env": {
+      "NODE_ENV": "Production"
+    }
+  }
+}
