@@ -2,7 +2,10 @@ import { deleteObject,saveData,getData,fireEvent,
     createUuid, Data, Event, Endpoint } from "./roli-runtime";
 
 export class Exercise extends Data {
-    constructor(public user: User, public description: string, public duration: number, public date: Date) {
+    constructor(public user: User, 
+        public description: string, 
+        public duration: number, 
+        public date: Date) {
         const id = createUuid(false);
         console.log(`Exercise id= ${id}`);
         super(id);

@@ -2,7 +2,10 @@ import React, {useEffect, useState, useReducer} from 'react';
 import {Link} from 'react-router-dom';
 
 import {useRoliClient} from 'exercise-tracker-service/react';
-import {Exercise, ExerciseAdded, ExerciseTrackerEndpoint, DataUpdatedEvent} from 'exercise-tracker-service';
+import {Exercise, ExerciseAdded, ExerciseTrackerEndpoint, DataUpdatedEvent} 
+    from 'exercise-tracker-service';
+
+import {key} from "exercise-tracker-service/key";
 
 interface ExerciseItemProps {
     exercise: Exercise,
@@ -30,7 +33,7 @@ function ExerciseItem(props: ExerciseItemProps) {
 }
 
 export function ExercisesList() {
-    const roli = useRoliClient();
+    const roli = useRoliClient(key);
 
     const exerciseTracker = roli.getEndpoint(ExerciseTrackerEndpoint, 'default');
 

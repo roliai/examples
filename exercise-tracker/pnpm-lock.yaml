@@ -522,8 +522,8 @@ packages:
   find-root@1.1.0:
     resolution: {integrity: sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==}
 
-  flatbuffers@2.0.4:
-    resolution: {integrity: sha512-4rUFVDPjSoP0tOII34oQf+72NKU7E088U5oX7kwICahft0UB2kOQ9wUzzCp+OHxByERIfxRDCgX5mP8Pjkfl0g==}
+  flatbuffers@24.3.25:
+    resolution: {integrity: sha512-3HDgPbgiwWMI9zVB7VYBHaMrbOO7Gm0v+yD2FV/sCKj+9NDeVL7BOBYUuhWAQGKWOzBo8S9WdMvV0eixO233XQ==}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -713,11 +713,11 @@ packages:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
 
-  roli-client-exercise-tracker-service-1@file:.roli/bindings/exercise-tracker/deps/roli-client-exercise-tracker-service-1:
-    resolution: {directory: .roli/bindings/exercise-tracker/deps/roli-client-exercise-tracker-service-1, type: directory}
+  roli-client@file:.roli/bindings/exercise-tracker/deps/roli-client:
+    resolution: {directory: .roli/bindings/exercise-tracker/deps/roli-client, type: directory}
 
-  roli-react-exercise-tracker-service-1@file:.roli/bindings/exercise-tracker/deps/roli-react-exercise-tracker-service-1:
-    resolution: {directory: .roli/bindings/exercise-tracker/deps/roli-react-exercise-tracker-service-1, type: directory}
+  roli-react@file:.roli/bindings/exercise-tracker/deps/roli-react:
+    resolution: {directory: .roli/bindings/exercise-tracker/deps/roli-react, type: directory}
     peerDependencies:
       react: ^18
 
@@ -1320,8 +1320,8 @@ snapshots:
 
   exercise-tracker-service@file:.roli/bindings/exercise-tracker(react@18.2.0):
     dependencies:
-      roli-client-exercise-tracker-service-1: file:.roli/bindings/exercise-tracker/deps/roli-client-exercise-tracker-service-1
-      roli-react-exercise-tracker-service-1: file:.roli/bindings/exercise-tracker/deps/roli-react-exercise-tracker-service-1(react@18.2.0)
+      roli-client: file:.roli/bindings/exercise-tracker/deps/roli-client
+      roli-react: file:.roli/bindings/exercise-tracker/deps/roli-react(react@18.2.0)
     transitivePeerDependencies:
       - react
       - supports-color
@@ -1332,7 +1332,7 @@ snapshots:
 
   find-root@1.1.0: {}
 
-  flatbuffers@2.0.4: {}
+  flatbuffers@24.3.25: {}
 
   fsevents@2.3.3:
     optional: true
@@ -1510,14 +1510,14 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  roli-client-exercise-tracker-service-1@file:.roli/bindings/exercise-tracker/deps/roli-client-exercise-tracker-service-1:
+  roli-client@file:.roli/bindings/exercise-tracker/deps/roli-client:
     dependencies:
-      flatbuffers: 2.0.4
+      flatbuffers: 24.3.25
       websocket: 1.0.35
     transitivePeerDependencies:
       - supports-color
 
-  roli-react-exercise-tracker-service-1@file:.roli/bindings/exercise-tracker/deps/roli-react-exercise-tracker-service-1(react@18.2.0):
+  roli-react@file:.roli/bindings/exercise-tracker/deps/roli-react(react@18.2.0):
     dependencies:
       react: 18.2.0
 
